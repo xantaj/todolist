@@ -56,9 +56,15 @@ Bu sayede uygulama basit bir görev yönetim sistemi işlevi görmektedir.
 
 ---
 
-## 🚀 Lokal Kurulum ve Çalıştırma Adımları
+## 🔧 Uygulamanın Çalışma Mantığı
 
-Bu projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+Uygulama, tamamen istemci tarafında çalışır. Kullanıcı görev eklediğinde, bu görev HTML DOM üzerinde listeye eklenir ve eş zamanlı olarak `localStorage` içine kaydedilir. Sayfa her yüklendiğinde, kaydedilmiş görevler `localStorage` üzerinden alınarak sayfaya otomatik olarak yüklenir.
+
+---
+
+## 🚀 Lokal Kurulum ve Çalıştırma Adımları (XAMPP ile)
+
+Bu projeyi XAMPP kullanarak kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edin:
 
 ### 🔽 1. Adım: Projeyi İndirin
 
@@ -70,40 +76,36 @@ git clone https://github.com/xantaj/todolist.git
 
 veya
 
-#### Zip dosyası olarak indirme:
+#### Zip olarak indirme:
 
 - GitHub sayfasına gidin.
 - Sağ üstte bulunan **Code** butonuna tıklayın.
 - **Download ZIP** seçeneğini seçin.
-- İndirdiğiniz zip dosyasını çıkarın.
+- İndirdiğiniz ZIP dosyasını çıkarın.
 
 ---
 
-### 📁 2. Adım: Proje Klasörüne Girin
+### 📁 2. Adım: Projeyi XAMPP'a Taşıyın
 
-İndirdiğiniz veya klonladığınız dosyanın bulunduğu klasöre girin:
+- İndirilen proje klasörünü, `C:/xampp/htdocs/` dizini altına taşıyın.  
+  Örnek: `C:/xampp/htdocs/todolist/`
 
-```bash
-cd todolist
+---
+
+### ⚙️ 3. Adım: XAMPP'ı Başlatın
+
+- **XAMPP Control Panel**'i açın.
+- **Apache** sunucusunu **Start** butonuna tıklayarak başlatın.
+
+---
+
+### 🌐 4. Adım: Tarayıcıda Uygulamayı Açın
+
+Aşağıdaki URL'yi tarayıcınızda açın:
+
 ```
-
----
-
-### 🌐 3. Adım: Uygulamayı Başlatın
-
-Herhangi bir sunucuya ihtiyaç yoktur. Aşağıdaki yöntemlerden biriyle `index.html` dosyasını açmanız yeterlidir:
-
-#### Yöntem 1: Dosyaya çift tıklayın  
-- `index.html` dosyasına çift tıklayarak varsayılan tarayıcınızda açabilirsiniz.
-
-#### Yöntem 2: Tarayıcıya sürükleyin  
-- `index.html` dosyasını bir web tarayıcısına (Chrome, Firefox, vb.) sürükleyip bırakın.
-
----
-
-### ✅ 4. Adım: Uygulamayı Kullanın
-
-Artık görev ekleme, silme, düzenleme ve tamamlama işlemlerini gerçekleştirebilirsiniz. Tüm görevleriniz tarayıcınızda güvenli şekilde saklanacaktır.
+http://localhost/todolist/
+```
 
 ---
 
@@ -111,10 +113,12 @@ Artık görev ekleme, silme, düzenleme ve tamamlama işlemlerini gerçekleştir
 
 ```
 todolist/
-├── index.html       # Ana HTML sayfası
-├── style.css        # Tasarımı sağlayan CSS dosyası
-├── script.js        # Tüm etkileşimi sağlayan JavaScript kodları
-└── README.md        # Proje açıklama dosyası
+├── css/
+│   └── style.css          # Uygulamanın stil dosyası
+├── js/
+│   └── script.js          # Etkileşimli JavaScript kodları
+├── index.php              # Ana giriş sayfası (XAMPP ile çalıştırılır)
+└── README.md              # Bu dokümantasyon dosyası
 ```
 
 ---
@@ -136,5 +140,5 @@ Her türlü görüş ve öneri için benimle iletişime geçebilirsiniz:
 
 ## 📌 Notlar
 
-- Uygulama yalnızca istemci taraflı çalışır. Herhangi bir arka uç (backend) bileşeni içermez.
+- Uygulama yalnızca istemci taraflı çalışır. Herhangi bir veritabanı kullanılmamıştır.
 - Proje, akademik amaçlarla ve temel web geliştirme becerilerini göstermek amacıyla hazırlanmıştır.
