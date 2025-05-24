@@ -1,61 +1,140 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ✅ TodoList Uygulaması
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bu proje, kullanıcıların günlük görevlerini kolayca takip edebileceği, sade ve işlevsel bir web tabanlı yapılacaklar listesi (ToDo List) uygulamasıdır. Uygulama tamamen istemci taraflı olarak HTML, CSS ve JavaScript kullanılarak geliştirilmiştir.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 👨‍💻 Geliştirici
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Ceyhun Ege Semercioğlu**  
+Öğrenci No: 2111502061  
+Bandırma Onyedi Eylül Üniversitesi Bilgisayar Mühendisliği
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🎯 Projenin Amacı
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Bu projenin amacı, temel web teknolojilerini kullanarak basit ama etkili bir yapılacaklar listesi (to-do list) uygulaması geliştirmektir. Kullanıcıların günlük görevlerini düzenli bir şekilde takip edebilmeleri için tasarlanmıştır. Proje, yazılım geliştirme sürecinde HTML, CSS ve JavaScript teknolojilerinin nasıl entegre bir şekilde çalıştığını göstermeyi hedefler.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🧩 Uygulama Özellikleri
 
-## Laravel Sponsors
+- 📝 Görev ekleme  
+- ✏️ Görev düzenleme  
+- ✅ Görevi tamamlanmış olarak işaretleme  
+- 🗑️ Görev silme  
+- 💾 Tarayıcı LocalStorage kullanarak veri saklama  
+- 📱 Responsive (mobil uyumlu) tasarım  
+- 🔁 Sayfa yenilemeden gerçek zamanlı liste güncelleme
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🛠️ Kullanılan Teknolojiler
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+| Teknoloji | Kullanım Amacı |
+|----------|----------------|
+| **HTML5** | Sayfa yapısı ve içerik oluşturma |
+| **CSS3** | Arayüz tasarımı ve stil uygulama |
+| **Vanilla JavaScript** | Sayfa içi etkileşimler ve görev yönetimi |
+| **LocalStorage** | Görev verilerinin tarayıcıda kalıcı olarak saklanması |
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🔧 Uygulamanın Çalışma Mantığı
 
-## Code of Conduct
+Uygulama, tamamen istemci tarafında çalışır. Kullanıcı görev eklediğinde, bu görev HTML DOM üzerinde listeye eklenir ve eş zamanlı olarak `localStorage` içine kaydedilir. Sayfa her yüklendiğinde, kaydedilmiş görevler `localStorage` üzerinden alınarak sayfaya otomatik olarak yüklenir.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Her görev için şu işlemler desteklenir:
 
-## Security Vulnerabilities
+- **Ekleme:** Kullanıcı metin kutusuna görev yazarak ekleyebilir.  
+- **Düzenleme:** Var olan görev üzerine tıklanarak metin değiştirilebilir.  
+- **Silme:** Sil butonu ile görev listeden ve localStorage’dan silinir.  
+- **Tamamlama:** Tamamlandı kutusu işaretlenerek görev işaretlenir.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Bu sayede uygulama basit bir görev yönetim sistemi işlevi görmektedir.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🚀 Lokal Kurulum ve Çalıştırma Adımları
+
+Bu projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+
+### 🔽 1. Adım: Projeyi İndirin
+
+#### Git ile klonlama:
+
+```bash
+git clone https://github.com/xantaj/todolist.git
+```
+
+veya
+
+#### Zip dosyası olarak indirme:
+
+- GitHub sayfasına gidin.
+- Sağ üstte bulunan **Code** butonuna tıklayın.
+- **Download ZIP** seçeneğini seçin.
+- İndirdiğiniz zip dosyasını çıkarın.
+
+---
+
+### 📁 2. Adım: Proje Klasörüne Girin
+
+İndirdiğiniz veya klonladığınız dosyanın bulunduğu klasöre girin:
+
+```bash
+cd todolist
+```
+
+---
+
+### 🌐 3. Adım: Uygulamayı Başlatın
+
+Herhangi bir sunucuya ihtiyaç yoktur. Aşağıdaki yöntemlerden biriyle `index.html` dosyasını açmanız yeterlidir:
+
+#### Yöntem 1: Dosyaya çift tıklayın  
+- `index.html` dosyasına çift tıklayarak varsayılan tarayıcınızda açabilirsiniz.
+
+#### Yöntem 2: Tarayıcıya sürükleyin  
+- `index.html` dosyasını bir web tarayıcısına (Chrome, Firefox, vb.) sürükleyip bırakın.
+
+---
+
+### ✅ 4. Adım: Uygulamayı Kullanın
+
+Artık görev ekleme, silme, düzenleme ve tamamlama işlemlerini gerçekleştirebilirsiniz. Tüm görevleriniz tarayıcınızda güvenli şekilde saklanacaktır.
+
+---
+
+## 📂 Proje Dosya Yapısı
+
+```
+todolist/
+├── index.html       # Ana HTML sayfası
+├── style.css        # Tasarımı sağlayan CSS dosyası
+├── script.js        # Tüm etkileşimi sağlayan JavaScript kodları
+└── README.md        # Proje açıklama dosyası
+```
+
+---
+
+## 🔒 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
+
+---
+
+## ✉️ İletişim
+
+Her türlü görüş ve öneri için benimle iletişime geçebilirsiniz:
+
+- 📧 ceyhunsemercioglu@ogr.bandirma.edu.tr
+- GitHub: [xantaj](https://github.com/xantaj)
+
+---
+
+## 📌 Notlar
+
+- Uygulama yalnızca istemci taraflı çalışır. Herhangi bir arka uç (backend) bileşeni içermez.
+- Proje, akademik amaçlarla ve temel web geliştirme becerilerini göstermek amacıyla hazırlanmıştır.
