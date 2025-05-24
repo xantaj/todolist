@@ -1,6 +1,6 @@
 # ✅ TodoList Uygulaması
 
-Bu proje, kullanıcıların günlük görevlerini kolayca takip edebileceği, sade ve işlevsel bir web tabanlı yapılacaklar listesi (ToDo List) uygulamasıdır. Uygulama tamamen istemci taraflı olarak HTML, CSS ve JavaScript kullanılarak geliştirilmiştir.
+Bu proje, kullanıcıların günlük görevlerini kolayca takip edebileceği, sade ve işlevsel bir web tabanlı yapılacaklar listesi (ToDo List) uygulamasıdır. Uygulama tamamen istemci taraflı olarak Laravel, HTML, CSS ve JavaScript kullanılarak geliştirilmiştir.
 
 ---
 
@@ -14,7 +14,7 @@ Bandırma Onyedi Eylül Üniversitesi Bilgisayar Mühendisliği
 
 ## 🎯 Projenin Amacı
 
-Bu projenin amacı, temel web teknolojilerini kullanarak basit ama etkili bir yapılacaklar listesi (to-do list) uygulaması geliştirmektir. Kullanıcıların günlük görevlerini düzenli bir şekilde takip edebilmeleri için tasarlanmıştır. Proje, yazılım geliştirme sürecinde HTML, CSS ve JavaScript teknolojilerinin nasıl entegre bir şekilde çalıştığını göstermeyi hedefler.
+Bu projenin amacı, temel web teknolojilerini kullanarak basit ama etkili bir yapılacaklar listesi (to-do list) uygulaması geliştirmektir. Kullanıcıların günlük görevlerini düzenli bir şekilde takip edebilmeleri için tasarlanmıştır. Proje, yazılım geliştirme sürecinde Laravel, HTML, CSS ve JavaScript teknolojilerinin nasıl entegre bir şekilde çalıştığını göstermeyi hedefler.
 
 ---
 
@@ -34,9 +34,10 @@ Bu projenin amacı, temel web teknolojilerini kullanarak basit ama etkili bir ya
 
 | Teknoloji | Kullanım Amacı |
 |----------|----------------|
+| **Laravel** | Verileri güvenli saklama |
 | **HTML5** | Sayfa yapısı ve içerik oluşturma |
 | **CSS3** | Arayüz tasarımı ve stil uygulama |
-| **Vanilla JavaScript** | Sayfa içi etkileşimler ve görev yönetimi |
+| **JavaScript** | Sayfa içi etkileşimler ve görev yönetimi |
 | **LocalStorage** | Görev verilerinin tarayıcıda kalıcı olarak saklanması |
 
 ---
@@ -105,20 +106,6 @@ Aşağıdaki URL'yi tarayıcınızda açın:
 
 ```
 http://localhost/todolist/
-```
-
----
-
-## 📂 Proje Dosya Yapısı
-
-```
-todolist/
-├── css/
-│   └── style.css          # Uygulamanın stil dosyası
-├── js/
-│   └── script.js          # Etkileşimli JavaScript kodları
-├── index.php              # Ana giriş sayfası (XAMPP ile çalıştırılır)
-└── README.md              # Bu dokümantasyon dosyası
 ```
 
 ---
